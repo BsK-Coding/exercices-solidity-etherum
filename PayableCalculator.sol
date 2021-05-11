@@ -22,25 +22,26 @@ contract PayableCalculator {
     }
     
     /* FUNCTIONS */
-    function add(uint256 nb1, uint256 nb2) public view returns (uint256) {
+    //Suppression des accents non pris en compte dans les chaines de String
+    function add(uint256 nb1, uint256 nb2) public view returns (uint256) costFunction () {
         return nb1 + nb2;
     }
     
-    function sub(uint256 nb1, uint256 nb2) public view returns (uint256) {
+    function sub(uint256 nb1, uint256 nb2) public view returns (uint256) costFunction () {
         require(nb1 > nb2, "Le 1er nombre doit être supérieur au second nombre pour ne pas être négatif");
         return nb1 - nb2;
     }
     
-    function mul(uint256 nb1, uint256 nb2) public view returns (uint256) {
+    function mul(uint256 nb1, uint256 nb2) public view returns (uint256) costFunction () {
         return nb1 * nb2;
     }
     
-    function div(uint256 nb1, uint256 nb2) public view returns (uint256) {
+    function div(uint256 nb1, uint256 nb2) public view returns (uint256) costFunction () {
         require(nb2 > 0, "Le second nombre (Dividende) doit être différent de 0 et positif");
         return nb1 / nb2;
     }
     
-    function add(uint256 nb1, uint256 nb2) public view returns (uint256) {
+    function mod(uint256 nb1, uint256 nb2) public view returns (uint256) costFunction () {
         require(nb1 > nb2, "Le 1er nombre doit être supérieur au second nombre");
         return nb1 % nb2;
     }
