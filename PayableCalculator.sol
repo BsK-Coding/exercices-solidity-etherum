@@ -12,7 +12,7 @@ contract PayableCalculator {
     
     /* STATE VARIABLES */
     uint256 private _functionPayable=1000000000000000;      //GAS utilisé par les functions 1 Finney = 1000000000000000 Wei
-                                                            //La valeur en GAS par défaut utilisé dans le contract s'exprime en Wei
+    address private _owner;                                 //La valeur en GAS par défaut utilisé dans le contract s'exprime en Wei
                                                             
     /* MODIFIER */                                                     
     modifier costFunction() {
