@@ -17,7 +17,7 @@ contract PayableCalculator {
     /* MODIFIER */                                                     
     modifier costFunction() {
         require(msg.sender == _owner, "Ownable: Only owner can call this function");
-        require(msg.value > _functionPayable);
+        require(msg.value > _functionPayable, "the balance must be greater than the price in GAS for the function");)
         _;
     }
     
